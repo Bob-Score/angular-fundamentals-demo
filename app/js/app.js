@@ -1,9 +1,10 @@
 'use strict';
 
 // this is creating the module
-var eventsApp = angular.module('eventsApp', ['ngResource', /*'ngCookies'*/ ])
-    .factory('myCache', function($cacheFactory) {
-        return $cacheFactory('myCache', {
-            capacity: 3
-        });
-    });
+var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
+    .config(function($routeProvider) {
+        $routeProvider.when('/newEvent', {
+            tempaltUrl: 'tempaltes/NewEvent.html',
+            controller: 'EditEventController'
+        })
+    })
