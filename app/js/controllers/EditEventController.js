@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var EditEventController = function($scope, eventData) {
 
@@ -16,14 +16,14 @@ var EditEventController = function($scope, eventData) {
                     function(response) {
                         console.log('failure', response);
                     });
-        )
 
+
+        }
+    };
+
+    $scope.canceEdit = function() {
+        window.location = '/EventDetails.html';
     }
-};
-
-$scope.canceEdit = function() {
-    window.location = '/EventDetails.html';
-}
 
 }
 
