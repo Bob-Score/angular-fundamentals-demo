@@ -18,9 +18,11 @@ app.use(express.static(rootPath + '/app'));
 // what to do when you get a get reqiest from this url
 app.get('/data/event/:id', events.get);
 
+// what to do when you get a get reqiest from this url using the getAll request
+app.get('/data/event', events.getAll);
+
 // what to do when you get a post reqiest from this url
 app.post('/data/event/:id', events.save);
-
 
 // use this port to listen out on
 app.listen(8000);
