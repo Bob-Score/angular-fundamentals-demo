@@ -1,6 +1,6 @@
 'use strict';
 
-var EventController = function($scope, eventData, $log, $anchorScroll, $routeParams) {
+var EventController = function($scope, eventData, $log, $anchorScroll, $routeParams, $route) {
 
     // $scope.myClass = "blue";
     // $scope.buttonDisabled = true;
@@ -11,6 +11,11 @@ var EventController = function($scope, eventData, $log, $anchorScroll, $routePar
     };
     $scope.sortorder = 'name'; // order buy upVoteCount descending
 
+
+    // a function to reload the single page....not that whole app
+    $scope.Reload = function() {
+        $route.reload();
+    };
 
     $scope.event = eventData.getEvent($routeParams.eventId)
         .$promise
@@ -40,4 +45,4 @@ var EventController = function($scope, eventData, $log, $anchorScroll, $routePar
 
 };
 
-eventsApp.controller('EventController', ['$scope', 'eventData', '$log', '$anchorScroll', '$routeParams', EventController]);
+eventsApp.controller('EventController', ['$scope', 'eventData', '$log', '$anchorScroll', '$routeParams', '$route', EventController]);

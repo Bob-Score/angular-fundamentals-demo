@@ -24,6 +24,11 @@ app.get('/data/event', events.getAll);
 // what to do when you get a post reqiest from this url
 app.post('/data/event/:id', events.save);
 
+// this takes any route that isnt found above..and always returns index.html
+app.get('*', function(req, res) {
+    res.sendFile(rootPath + '/app/index.html');
+})
+
 // use this port to listen out on
 app.listen(8000);
 
