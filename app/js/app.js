@@ -15,4 +15,8 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
             templateUrl: 'templates/EventDetails.html',
             controller: 'EventController'
         });
+        $routeProvider.otherwise({ // default route , so if the route is not specified it will goto this one
+            redirectTo: '/events'
+        });
+
     })
