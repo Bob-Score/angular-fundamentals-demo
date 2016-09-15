@@ -1,7 +1,7 @@
 <html ng-app='eventsApp'>
 
 <head>
-  <base href='/'/>
+    <base href='/' />
     <meta charset="UTF-8">
     <title>Event Registraton</title>
     <link rel='stylesheet' href='/css/bootstrap.min.css'>
@@ -14,13 +14,13 @@
         <div class='navbar' ng-controller='MainMenuController'>
             <div class='navbar-inner'>
                 <ul class='nav'>
-                    <li><a href="#"ng-click='createEvent()'>Create Event</a></li>
+                    <li><a href="#" ng-click='createEvent()'>Create Event</a></li>
                 </ul>
             </div>
         </div>
 
-    <ng-view>
-    </ng-view>
+        <ng-view>
+        </ng-view>
 
     </div>
 
@@ -38,10 +38,11 @@
     <script src='/js/controllers/EditEventController.js'></script>
     <script src='/js/controllers/EventListController.js'></script>
     <script src='/js/controllers/MainMenuController.js'></script>
-        <script src='/js/controllers/SampleDirectiveController.js'></script>
+    <script src='/js/controllers/SampleDirectiveController.js'></script>
     <script src='/js/services/EventData.js'></script>
     <script src='/js/directives/mySample.js'></script>
-        <script src='/js/directives/eventThumbnail.js'></script>
+    <script src='/js/directives/eventThumbnail.js'></script>
+    <script src='/js/directives/upvote.js'></script>
     <script src='/js/filters.js'></script>
 
 </body>
